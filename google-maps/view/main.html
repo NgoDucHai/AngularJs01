@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>AngularJs Google-Maps</title>
+		<link rel="stylesheet" type="text/css" href="../style/main.css">
+		<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+	</head>
+	<body >
+
+		<h1>AngularJs Google-Maps By Thuy Nguyen</h1>
+
+		<div ng-app="mapsApp" ng-controller="MapCtrl">
+		    <div id="map"></div>
+		    <div id="class" ng-repeat="marker in markers | orderBy : 'title'">
+		         <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+		    </div>
+		</div>
+		<div ng-app="angularMaps">
+			<google-map center="latitude:30,longtude:-120">
+
+			</google-map>
+		</div>
+
+		<script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
+
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+		<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+
+		<script type="text/javascript" src="../script/controller/app.js"></script>
+
+		<script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+
+		<script type="text/javascript" src="../bower_components/lodash/lodash.min.js"></script>
+
+		<script type="text/javascript" src="../bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+	</body>
+</html>
